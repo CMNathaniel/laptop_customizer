@@ -1,14 +1,12 @@
 import React from "react";
 import slugify from "slugify";
 
-// This object will allow us to
-// easily convert numbers into US dollar values
 const USCurrencyFormat = new Intl.NumberFormat("en-US", {
   style: "currency",
   currency: "USD"
 });
 
-export default class Choices extends React.Component {
+export default class Choice extends React.Component {
   render() {
     const featureHash = this.props.feature + "-" + this.props.idx;
     const options = this.props.features[this.props.feature].map(item => {

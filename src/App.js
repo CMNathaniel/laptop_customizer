@@ -1,17 +1,9 @@
-<<<<<<< HEAD
 import React, { Component } from "react";
 
 import Selection from "./Selection/Selection";
 import Order from "./Order/Order";
 
 import "./App.css";
-=======
-import React, { Component } from 'react';
-import slugify from 'slugify';
-import './App.css';
-import Selection from "./Selection.js";
-import Order from "./Order.js";
->>>>>>> 7f6ee6ca503dc8b754e68eddf2729009cde7abe0
 
 class App extends Component {
   state = {
@@ -41,7 +33,6 @@ class App extends Component {
         <header>
           <h1>ELF Computing | Laptops</h1>
         </header>
-<<<<<<< HEAD
         <main>
           <Selection
             {...this.props}
@@ -50,10 +41,6 @@ class App extends Component {
           />
           <Order {...this.props} {...this.state} />
         </main>
-=======
-        <Selection features={this.state.features} />
-        <Order features={this.state.features} />
->>>>>>> 7f6ee6ca503dc8b754e68eddf2729009cde7abe0
       </div>
     );
   }

@@ -1,13 +1,19 @@
-import React, { Component } from "react";
+import React from "react";
 import "./Total.css";
 
-class Total extends Component {
-  const total = Object.keys(this.state.selected).reduce(
+const USCurrencyFormat = new Intl.NumberFormat("en-US", {
+  style: "currency",
+  currency: "USD"
+}); 
+
+export default class Total extends React.Component {
+  render() {
+   const total = Object.keys(this.state.selected).reduce(
    (acc, curr) => acc + this.state.selected[curr].cost,
    0
  );
 
-  render() {
+  
     return (
       <div className="Order">
         <div className="summary__total">
@@ -22,7 +28,6 @@ class Total extends Component {
   }
 }
 
-export default Total;
 
 
 
