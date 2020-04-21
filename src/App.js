@@ -27,9 +27,9 @@ class App extends Component {
     }
   };
 
-  updateFeature = index => {
-    let features = this.state.features;
-    features[index].selected = !features[index].selected;
+  updateFeature = idx => {
+    let features = this.props.features;
+    features[idx].selected = !features[idx].selected;
     this.setState({features});
   };
 
