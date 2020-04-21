@@ -13,7 +13,7 @@ export default class Order extends React.Component {
     const summary = Object.keys(this.props.selected).map((feature, idx) => (
       <>
       <OrderBreakdown feature={feature} idx={idx} {...this.props} />
-      <Total {...this.props} feature={feature} idx={idx} />
+      <Total {...this.props} selected={this.props.selected} feature={feature} idx={idx} />
       </>
     ));
 
