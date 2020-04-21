@@ -27,6 +27,12 @@ class App extends Component {
     }
   };
 
+  updateFeature = index => {
+    let features = this.state.features;
+    features[index].selected = !features[index].selected;
+    this.setState({features});
+  };
+
   render() {
     return (
       <div className="App">
