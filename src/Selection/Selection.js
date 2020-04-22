@@ -4,7 +4,7 @@ import Choice from "../Choice/Choice";
 export default class Selection extends React.Component {
   render() {
     const features = Object.keys(this.props.features).map((feature, idx) => (
-      <Choice {...this.props} feature={feature} idx={idx} />
+      <Choice {...this.props} {...this.state} feature={feature} idx={idx} />
     ));
 
     return (
