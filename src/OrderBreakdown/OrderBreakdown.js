@@ -5,7 +5,7 @@ const USCurrencyFormat = new Intl.NumberFormat("en-US", {
   currency: "USD"
 });
 
-export default class Order extends React.Component {
+export default class OrderBreakdown extends React.Component {
   render() {
     const featureHash = this.props.feature + "-" + this.props.idx;
     const selectedOption = this.props.selected[this.props.feature];

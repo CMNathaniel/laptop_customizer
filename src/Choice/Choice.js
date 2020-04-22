@@ -7,18 +7,23 @@ const USCurrencyFormat = new Intl.NumberFormat("en-US", {
 });
 
 export default class Choice extends React.Component {
+
   render() {
+    console.log("this is props", this.props);
+    console.log("this is state", this.state);
+
     const featureHash = this.props.feature + "-" + this.props.idx;
     const options = this.props.features[this.props.feature].map(item => {
       const itemHash = slugify(JSON.stringify(item));
       return (
+        
         <div key={itemHash} className="feature__item">
           <input
             type="radio"
             id={itemHash}
             className="feature__option"
             name={slugify(this.props.feature)}
-            checked={item.name === this.state.selected[this.props.feature].name}
+            checked={item.name === this.props.selected[this.props.feature].name}  
             onChange={e => this.props.updateFeature(this.props.feature)}
           />
           <label htmlFor={itemHash} className="feature__label">
