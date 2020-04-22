@@ -18,8 +18,8 @@ export default class Choice extends React.Component {
             id={itemHash}
             className="feature__option"
             name={slugify(this.props.feature)}
-            checked={item.name === this.props.selected[this.props.feature].name}
-            onChange={e => this.props.updateFeature(this.props.idx)}
+            checked={item.name === this.state.selected[this.props.feature].name}
+            onChange={e => this.props.updateFeature(this.props.feature)}
           />
           <label htmlFor={itemHash} className="feature__label">
             {item.name} ({USCurrencyFormat.format(item.cost)})
